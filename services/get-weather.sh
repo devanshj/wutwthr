@@ -1,5 +1,5 @@
 latLong=$1
-weatherRes=$(curl -s "https://api.darksky.net/forecast/2b8063d58ed6137072c531f072a843eb/$latLong?units=si")
+weatherRes=$(curl -s "https://api.pirateweather.net/forecast/sY3NsgIPM7k19NlbIzgLSgKm89WxJJpU/$latLong?units=si")
 declare -A weather
 
 keys=(
@@ -24,7 +24,7 @@ keys=(
 
 
 for key in ${keys[@]}; do
-    regex='"currently":{.[^}]*"'$key'":(.[^,}]*)'
+    regex='"currently":\{.[^}]*"'$key'":(.[^,}]*)'
     if [[ $weatherRes =~ $regex ]]; then
         weather[$key]=${BASH_REMATCH[1]}
     else
