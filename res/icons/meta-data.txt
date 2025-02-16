@@ -1,0 +1,9 @@
+clear-day: 5 9
+clear-night: 5 10
+cloudy: 3 11
+fog: 3 11
+partly-cloudy-day: 4 11
+partly-cloudy-night: 4 11
+rain: 5 9
+sleet: 5 9
+snow: 5 9
